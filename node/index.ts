@@ -40,7 +40,7 @@ const fetchComments = async (): Promise<Comment[]> => {
 };
 
 
-const getComments = async (): Promise<Comment[]> => {
+export const getComments = async (): Promise<Comment[]> => {
     if (cache.data && cache.timestamp && Date.now() - cache.timestamp < CACHE_DURATION) {
         return cache.data;
     }
